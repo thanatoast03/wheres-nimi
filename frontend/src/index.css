@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "Parkinsans";
+    src: url("fonts/Parkinsans-VariableFont_wght.ttf");
+}
+
+html {
+    font-family: "Parkinsans";
+}
