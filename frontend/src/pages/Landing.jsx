@@ -42,7 +42,7 @@ export default function Landing() {
 
   return (
     <main className="flex-grow flex flex-col justify-evenly text-center items-center">
-        <img src={doodle} className="w-[300px] h-[300px] sm:w-[512px] sm:h-[512px] justify-self-center"/>
+        <img src={doodle} className="w-[300px] h-[300px] sm:w-[460px] sm:h-[460px] justify-self-center"/>
         <div className="bg-[#99DBE1] w-[300px] sm:w-1/2 py-5 rounded-lg drop-shadow-lg">
         {!status.is_live && status.last_stream_end && (
             <p className="mt-2 text-gray-600">
