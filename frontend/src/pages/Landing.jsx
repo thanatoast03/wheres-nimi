@@ -51,17 +51,23 @@ export default function Landing() {
         )}
         {status.is_live && status.stream_url && (
             <div>
-                <div className="flex items-center gap-2">
-                    <span className='h-3 w-3 rounded-full bg-red-500'/>
+                <div className="flex items-center gap-2 justify-self-center">
+                  <span className={`h-3 w-3 rounded-full ${
+                    status.is_live ? 'bg-red-500' : 'bg-gray-500'
+                  }`} />
+                  <span className="font-medium">
+                    {status.is_live ? 'LIVE NOW' : 'Offline'}
+                  </span>
                 </div>
                 <a
                     href={status.stream_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 text-blue-500 hover:underline block"
+                    className="mt-2 text-blue-500 hover:underline block justify-self-center"
                 >
                     Watch Stream
                 </a>
+                
             </div>
         )}
         </div>
