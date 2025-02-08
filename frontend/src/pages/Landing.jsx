@@ -2,22 +2,21 @@
 import React, { useState, useEffect } from 'react';
 
 // positive reaction images 
-import blush from "../../public/images/pos/blush.png";
-import flushed from "../../public/images/pos/flushed.png";
-import happy from "../../public/images/pos/happy.png";
-import happyevil from "../../public/images/pos/happyevil.png";
-import happynaps from "../../public/images/pos/happynaps.png";
-import smug from "../../public/images/pos/smug.png";
-import wow from "../../public/images/pos/wow.png";
+
+import flushed from "../../public/images/pos/optimized-flushed.png";
+import happy from "../../public/images/pos/optimized-happy.png";
+import happyevil from "../../public/images/pos/optimized-happyevil.png";
+import happynaps from "../../public/images/pos/optimized-happynaps.png";
+import smug from "../../public/images/pos/optimized-smug.png";
+import wow from "../../public/images/pos/optimized-wow.png";
 
 // negative reaction images
-import cry from "../../public/images/neg/cry.png";
-import derp from "../../public/images/neg/derp.png";
-import dizzy from "../../public/images/neg/dizzy.png";
-import mad from "../../public/images/neg/mad.png";
-import shocked from "../../public/images/neg/shocked.png";
-import smugevil from "../../public/images/neg/smugevil.png";
-import tired from "../../public/images/neg/tired.png";
+import cry from "../../public/images/neg/optimized-cry.png";
+import dizzy from "../../public/images/neg/optimized-dizzy.png";
+import mad from "../../public/images/neg/optimized-mad.png";
+import shocked from "../../public/images/neg/optimized-shocked.png";
+import smugevil from "../../public/images/neg/optimized-smugevil.png";
+import tired from "../../public/images/neg/optimized-tired.png";
 
 export default function Landing() {
   const [status, setStatus] = useState({
@@ -60,17 +59,15 @@ export default function Landing() {
   const [image, setImage] = useState(null);
   const [comment, setComment] = useState(null);
   const posImg = [
-    [blush, "omg what a cute live tapir! go watch now!"],
     [flushed, "nimi? sorry, nimi? sorry, nimi? sorry-"],
     [happy, "cute nimi live now! come watch!!"],
     [happyevil, "cute nimi live now! you WILL watch"],
     [happynaps, "hey, that's us! come watch with the rest of us!"],
-    [smug, "CLEARLY you're not watching the nimi stream"],
+    [smug, "CLEARLY you're not watching the nimi stream right now"],
     [wow, "NIMI? LIVE? RIGHT NOW??? YAYYYYYYYY"],
   ];
   const negImg = [
     [cry, "i miss nimi... where's nimi..."],
-    [derp, "my brain short-circuiting when no nimi"],
     [dizzy, "1 second without nimi has me confused"],
     [mad, "streamer stream! encore! but like for streams!"],
     [shocked, "where is my sunshine i cannot find the nimi stream"],
@@ -79,7 +76,7 @@ export default function Landing() {
   ];
 
   function getRandomNumber() { // hard coded for number of images in each folder
-    return Math.floor(Math.random() * 7);
+    return Math.floor(Math.random() * 6);
   }
 
   function getImageComment(is_live){
@@ -101,7 +98,6 @@ export default function Landing() {
     <main className="flex-grow flex flex-col justify-evenly text-center items-center">
       <h1 className='text-5xl font-bold text-[#4f6d59] drop-shadow-lg'>Where's Nimi?</h1>
       <div>
-        {/* <img src={image} className="aspect-auto min-w-[400px] min-h-[400px] sm:max-w-[400px] sm:max-h-[429px] justify-self-center"/> */}
         <img src={image} className='aspect-auto max-w-[400px]'/>
         <p className='pt-3'>{comment}</p>
       </div>
